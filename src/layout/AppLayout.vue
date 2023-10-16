@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex" style="height: 100vh">
     <div
-      class="sidebar bg-primary overflow-y-scroll"
+      class="sidebar bg-info overflow-y-scroll"
       :class="{ 'nav-on': appStore.sideNav, 'nav-off': !appStore.sideNav }"
     >
       <SideNav></SideNav>

@@ -16,7 +16,7 @@ $light: #eeeeee;
 
 .btn.btn-primary {
   color: white !important;
-  border: 1px solid #5fb19a !important;
+  border: 1px solid #eee4b1 !important;
 }
 .btn.btn-secondary {
   color: white !important;
@@ -28,7 +28,13 @@ $light: #eeeeee;
 table tr {
   vertical-align: middle;
 }
-
+.hover-shadow {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.331);
+  transition: all 0.5s ease;
+}
+.hover-shadow:hover {
+  box-shadow: 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.331) !important;
+}
 .btn {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15) !important;
 }

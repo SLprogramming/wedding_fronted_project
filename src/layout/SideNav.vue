@@ -1,11 +1,11 @@
 <template>
   <div class="w-100 h-100">
-    <h3 class="text-white text-center">Wedding</h3>
+    <h3 class="text-white font-bold pt-2 text-center">Wedding</h3>
     <ul class="list-unstyled px-1">
       <li>
         <div>
           <button
-            class="btn btn-primary w-100 btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            class="btn btn-info w-100 btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#inventory-collapse"
             aria-expanded="true"
@@ -14,11 +14,17 @@
           </button>
           <div class="collapse show mb-2" id="inventory-collapse">
             <ul class="btn-toggle-nav d-flex flex-column list-unstyled fw-normal small">
-              <li class="ps-2 text-white bg-primary w-100 rounded-2">
+              <li class="ps-2 text-white bg-info w-100 rounded-2">
                 <NavLink :payload="{ url: 'category.list', name: 'Category List' }"></NavLink>
               </li>
-              <li class="ps-2 text-white bg-primary w-100 rounded-2">
+              <li class="ps-2 text-white bg-info w-100 rounded-2">
                 <NavLink :payload="{ url: 'dress.list', name: 'Dress List' }"></NavLink>
+              </li>
+              <li class="ps-2 text-white bg-info w-100 rounded-2">
+                <NavLink :payload="{ url: 'theme.list', name: 'Theme List' }"></NavLink>
+              </li>
+              <li class="ps-2 text-white bg-info w-100 rounded-2">
+                <NavLink :payload="{ url: 'package.list', name: 'Package List' }"></NavLink>
               </li>
               <!-- <li class="float-right mb-1 ps-3 text-white bg-primary w-100 rounded-2 py-2 myList">
                 Theme List
@@ -33,18 +39,25 @@
       <li>
         <div>
           <button
-            class="btn btn-primary w-100 btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            class="btn btn-info w-100 btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#appointment-collapse"
             aria-expanded="true"
           >
-            <i class="bi bi-calendar-check me-2"></i> APPOINTMENT
+            <i class="bi bi-calendar-check-fill me-2"></i> APPOINTMENT
           </button>
           <div class="collapse show mb-2" id="appointment-collapse">
-            <ul class="btn-toggle-nav d-flex flex-column list-unstyled fw-normal pt-1 small ps-3">
-              <li class="float-right mb-1 ps-3 text-white bg-primary w-100 rounded-2 py-2 myList">
-                Appointment List
+            <ul class="btn-toggle-nav d-flex flex-column list-unstyled fw-normal small">
+              <li class="ps-2 text-white bg-info w-100 rounded-2">
+                <NavLink :payload="{ url: 'appointment.list', name: 'Appointment List' }"></NavLink>
               </li>
+
+              <!-- <li class="float-right mb-1 ps-3 text-white bg-primary w-100 rounded-2 py-2 myList">
+                Theme List
+              </li>
+              <li class="float-right mb-1 ps-3 text-white bg-primary w-100 rounded-2 py-2 myList">
+                Package List
+              </li> -->
             </ul>
           </div>
         </div>
@@ -52,18 +65,25 @@
       <li>
         <div>
           <button
-            class="btn btn-primary w-100 btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            class="btn btn-info w-100 btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#collection-collapse"
             aria-expanded="true"
           >
-            <i class="bi bi-collection me-2"></i> COLLECTION
+            <i class="bi bi-collection-fill me-2"></i> COLLECTION
           </button>
           <div class="collapse show mb-2" id="collection-collapse">
-            <ul class="btn-toggle-nav d-flex flex-column list-unstyled fw-normal pt-1 small ps-3">
-              <li class="float-right mb-1 ps-3 text-white bg-primary w-100 rounded-2 py-2 myList">
-                Collection List
+            <ul class="btn-toggle-nav d-flex flex-column list-unstyled fw-normal small">
+              <li class="ps-2 text-white bg-info w-100 rounded-2">
+                <NavLink :payload="{ url: 'collection.list', name: 'Collection List' }"></NavLink>
               </li>
+
+              <!-- <li class="float-right mb-1 ps-3 text-white bg-primary w-100 rounded-2 py-2 myList">
+                Theme List
+              </li>
+              <li class="float-right mb-1 ps-3 text-white bg-primary w-100 rounded-2 py-2 myList">
+                Package List
+              </li> -->
             </ul>
           </div>
         </div>
@@ -77,17 +97,18 @@ import NavLink from '../tools/NavLink.vue'
 
 <style lang="scss" scoped>
 .btn-toggle {
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 600;
   background-color: transparent;
   width: 100%;
   position: relative;
   margin-bottom: 5px;
+  box-shadow: 0.2rem 0.2rem 0.6rem #282e347e !important;
 }
 
 .btn-toggle:hover,
 .btn-toggle:focus {
-  color: white;
+  color: rgb(0, 0, 0);
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -103,7 +124,7 @@ import NavLink from '../tools/NavLink.vue'
 }
 
 .btn-toggle[aria-expanded='true'] {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .btn-toggle[aria-expanded='true']::before {
@@ -114,9 +135,10 @@ import NavLink from '../tools/NavLink.vue'
   padding: 0.1875rem 0.5rem;
   margin-bottom: 0.25rem;
   margin-top: 0.125rem;
+  color: black;
   margin-left: 0.75rem;
-  border: 1px solid #5fb19a !important;
-  box-shadow: 0.2rem 0.2rem 0.6rem #0f534f7e !important;
+  border: 1px solid #e0d98a !important;
+  box-shadow: 0.2rem 0.2rem 0.6rem #282e347e !important;
   font-size: 14px;
 }
 .btn-primary {
