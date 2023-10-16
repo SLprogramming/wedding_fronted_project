@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex align-items-center justify-content-between border-1 rounded shadow-sm bg-info p-2 my-2"
+    class="d-flex align-items-center justify-content-between border-1 rounded shadow-sm bg-info px-2 py-1 my-2"
   >
     <div class="d-flex align-items-center gap-3">
       <button class="btn btn-outline-info bg-white" @click="appStore.sideNav = !appStore.sideNav">

@@ -1,7 +1,7 @@
 <template>
   <router-link
     :to="{ name: payload.url }"
-    class="text-white d-inline-flex text-decoration-none p-2 rounded cus-nav-link"
+    class="text-white d-inline-flex text-decoration-none px-2 py-1 rounded cus-nav-link"
     >{{ payload.name }}</router-link
   >
 </template>

@@ -63,7 +63,15 @@
             rows="5"
           ></textarea>
           <template v-if="isUpdate">
-            <button class="btn btn-danger text-white d-inline-block me-2" @click="isUpdate = false">
+            <button
+              class="btn btn-danger text-white d-inline-block me-2"
+              @click="
+                () => {
+                  isUpdate = false
+                  resetData()
+                }
+              "
+            >
               cancel
             </button>
             <button class="btn btn-info text-white d-inline-block me-2" @click="updateCategory()">
