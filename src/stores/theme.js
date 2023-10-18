@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
 import { getAxiosClient } from '@/data/axios'
-export const useDressStore = defineStore('dress', {
+export const useThemeStore = defineStore('theme', {
   actions: {
-    fetchDresses() {
+    fetchThemes() {
       return getAxiosClient()
-        .get('dress')
+        .get('theme')
         .then((res) => {
           return res.data
         })
@@ -12,9 +12,9 @@ export const useDressStore = defineStore('dress', {
           throw error
         })
     },
-    fetchDress(payload) {
-      return getAxiosClient()
-        .get('dress/' + payload.id)
+    fetchTheme(payload) {
+      return getAxiosClient(payload)
+        .get('theme/' + payload.id)
         .then((res) => {
           return res.data
         })
@@ -22,9 +22,9 @@ export const useDressStore = defineStore('dress', {
           throw error
         })
     },
-    createDress(payload) {
+    createTheme(payload) {
       return getAxiosClient()
-        .post('dress', payload)
+        .post('theme', payload)
         .then((res) => {
           return res.data
         })
@@ -32,9 +32,9 @@ export const useDressStore = defineStore('dress', {
           throw error
         })
     },
-    deleteDress(id) {
+    deleteTheme(id) {
       return getAxiosClient()
-        .delete('dress/' + id)
+        .delete('theme/' + id)
         .then((res) => {
           return res.data
         })
@@ -42,9 +42,9 @@ export const useDressStore = defineStore('dress', {
           throw error
         })
     },
-    updateDress(payload, id) {
+    updateTheme(payload, id) {
       return getAxiosClient()
-        .put('dress/' + id, payload)
+        .put('theme/' + id, payload)
         .then((res) => {
           return res.data
         })

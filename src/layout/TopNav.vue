@@ -6,7 +6,7 @@
       <button class="btn btn-outline-info bg-white" @click="appStore.sideNav = !appStore.sideNav">
         <i class="bi bi-upc"></i>
       </button>
-      <button class="btn btn-outline-info bg-white">
+      <button class="btn btn-outline-info bg-white" @click="router.back()">
         <i class="bi bi-chevron-left"></i>
       </button>
       <div class="text-capitalize fw-semibold">Wedding Studio</div>
@@ -34,6 +34,9 @@
   </div>
 </template>
 <script setup>
+import { useRouter } from 'vue-router'
 import { useAppStore } from '../stores/app'
+
+const router = useRouter()
 const appStore = useAppStore()
 </script>

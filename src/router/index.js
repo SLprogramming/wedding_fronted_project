@@ -5,8 +5,10 @@ import AppLayout from '@/layout/AppLayout.vue'
 import CategoryList from '@/view/category/CategoryList.vue'
 
 import DressList from '@/view/dress/DressList.vue'
+import DressDetail from '@/view/dress/DressDetail.vue'
 
 import ThemeList from '@/view/theme/ThemeList.vue'
+import ThemeDetail from '@/view/theme/ThemeDetail.vue'
 
 import AppointmentList from '@/view/appointment/AppointmentList.vue'
 
@@ -51,6 +53,12 @@ const router = createRouter({
               path: 'list',
               name: 'dress.list',
               component: DressList
+            },
+            {
+              path: 'detail/:id',
+              name: 'dress.detail',
+              component: DressDetail,
+              props: true
             }
           ]
         },
@@ -64,6 +72,12 @@ const router = createRouter({
               path: 'list',
               name: 'theme.list',
               component: ThemeList
+            },
+            {
+              path: 'detail/:id',
+              name: 'theme.detail',
+              component: ThemeDetail,
+              props: true
             }
           ]
         },
